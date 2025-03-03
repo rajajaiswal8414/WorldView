@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700,800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
+    <title>WorldView</title>
+  </head>
+  <body
+    class="font-nunito bg-white text-black dark:bg-veryDarkBlue-bg dark:text-white"
+  >
+    <header class="shadow-md bg-white dark:bg-darkBlue">
+      <div
+        class="container sm:px-0 p-4 mx-auto flex justify-between items-center py-3"
+      >
+        <h2 class="sm:text-2xl text-xl">Where in the world?</h2>
+        <button type="button" class="theme-changer cursor-pointer">
+          <i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode
+        </button>
+      </div>
+    </header>
+
+    <main class="mt-10 container mx-auto">
+      <div
+        class="search-filter-container mb-10 flex xs:flex-row flex-col xs:justify-between xs:mx-0 mx-16"
+      >
+        <div
+          class="dark:bg-darkBlue dark:border-none bg-white search-container shadow-sm rounded border-2 flex items-center xs:w-1/2 w-full"
+        >
+          <i class="fa-solid fa-magnifying-glass pl-3 text-gray-400"></i>
+          <input
+            class="dark:bg-darkBlue py-2 w-full pl-5 focus:outline-none"
+            placeholder="Search for a country..."
+            type="text"
+            name=""
+            id=""
+          />
+        </div>
+
+        <div class="relative inline-block xs:mt-0 mt-10 w-44">
+          <!-- Dropdown Button -->
+          <div
+            id="dropdownBtn"
+            class="dark:bg-darkBlue dark:border-none bg-white flex items-center justify-between shadow-sm border-2 xs:px-5 px-2 rounded h-full py-2 w-full"
+          >
+            <span class="px-2 text-sm">Filter by Region</span>
+            <i id="dropdownIcon" class="bx bx-chevron-down"></i>
+          </div>
+
+          <ul
+            id="dropdownMenu"
+            class="dark:bg-darkBlue dark:border-none absolute border-2 bg-white mt-2 w-full rounded hidden"
+          >
+            <li
+              class="option p-2 dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer"
+              data-value="Africa"
+            >
+              Africa
+            </li>
+            <li
+              class="option p-2 dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer"
+              data-value="America"
+            >
+              America
+            </li>
+            <li
+              class="option p-2 dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer"
+              data-value="Asia"
+            >
+              Asia
+            </li>
+            <li
+              class="option p-2 dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer"
+              data-value="Europe"
+            >
+              Europe
+            </li>
+            <li
+              class="option p-2 dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer"
+              data-value="Oceania"
+            >
+              Oceania
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flag-container grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center"
+      ></div>
+    </main>
+  </body>
+</html>

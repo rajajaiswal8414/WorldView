@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700,800"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="country.js" defer></script>
+    <title>WorldView</title>
+  </head>
+  <body class="font-nunito dark:bg-veryDarkBlue-bg dark:text-white">
+    <header class="shadow-md">
+      <div
+        class="container sm:px-0 px-4 mx-auto flex justify-between items-center py-3"
+      >
+        <h2 class="sm:text-2xl text-xl">Where in the world?</h2>
+        <button type="button" class="theme-changer cursor-pointer">
+          <i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container mx-auto mt-12">
+        <span
+          class="dark:border-none dark:bg-darkBlue back-button cursor-pointer shadow-sm border-2 px-4 py-1 text-center rounded"
+          href="#"
+          ><i class="fa-solid fa-arrow-left"></i>&nbsp; Back</span
+        >
+
+        <div
+          class="country-details mt-10 lg:flex lg:flex-row flex-col lg:justify-evenly gap-14"
+        >
+          <img
+            class="lg:w-1/2 w-auto lg:h-96 h-auto object-contain"
+            src=""
+            alt=""
+          />
+          <div class="xl:mt-0 mt-3 xl:flex xl:flex-col lg:justify-end">
+            <h1 class="country-name sm:text-3xl text-2xl font-bold mb-5"></h1>
+            <div class="lg:flex flex-col lg:flex-row gap-5">
+              <div class="mb-7 lg:mb-0">
+                <p class="xs:text-lg text-sm">
+                  <b>Native Name: </b><span class="native-name"></span>
+                </p>
+                <p class="xs:text-lg text-sm">
+                  <b>Population: </b><span class="population"></span>
+                </p>
+                <p class="xs:text-lg text-sm">
+                  <b>Region: </b><span class="region"></span>
+                </p>
+                <p class="xs:text-lg text-sm">
+                  <b>Sub Region: </b><span class="sub-region"></span>
+                </p>
+                <p class="xs:text-lg text-sm">
+                  <b>Capital: </b><span class="capital"></span>
+                </p>
+              </div>
+
+              <div>
+                <p class="xs:text-lg text-sm">
+                  <b>Top Level Domain: </b
+                  ><span class="top-level-domain"></span>
+                </p>
+                <p class="xs:text-lg text-sm">
+                  <b>Currencies: </b><span class="currencies"></span>
+                </p>
+                <p class="xs:text-lg text-sm">
+                  <b>Languages: </b><span class="languages"></span>
+                </p>
+              </div>
+            </div>
+            <p class="border-countries w-full lg:mt-16 mt-10 flex flex-wrap">
+              <b>Border Countries: </b>&nbsp;
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
