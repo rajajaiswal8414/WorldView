@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check Local Storage for Theme
     if (localStorage.getItem('theme') === 'dark') {
         html.classList.add('dark');
+        updateButtonText();
     }
 
     themeToggle.addEventListener('click', () => {
@@ -86,11 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Save preference in Local Storage
         if (html.classList.contains('dark')) {
-            themeToggle.innerHTML = `<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode`;
             localStorage.setItem('theme', 'dark');
         } else {
-            themeToggle.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode`;
             localStorage.setItem('theme', 'light');
         }
+        updateButtonText()
     });
+
+    function updateButtonText() {
+        if (html.classList.contains('dark')) {
+            themeToggle.innerHTML = `<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode`;
+        }
+        else {
+            themeToggle.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode`;
+        }
+    }
 });
