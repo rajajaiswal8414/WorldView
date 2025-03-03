@@ -65,17 +65,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (localStorage.getItem('theme') == 'dark') {
         htmlElement.classList.add('dark');
+        updateButtonText()
     }
 
     themeChanger.addEventListener('click', () => {
         htmlElement.classList.toggle('dark');
 
-        if (html.classList.contains('dark')) {
-            themeToggle.innerHTML = `<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode`;
+        if (htmlElement.classList.contains('dark')) {
             localStorage.setItem('theme', 'dark');
         } else {
-            themeToggle.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode`;
             localStorage.setItem('theme', 'light');
         }
+        updateButtonText()
     })
+    
+    function updateButtonText() {
+        if (htmlElement.classList.contains('dark')) {
+            themeChanger.innerHTML = `<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode`;
+        }
+        else {
+            themeChanger.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode`;
+        }
+    }
 })
