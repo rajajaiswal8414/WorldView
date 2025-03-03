@@ -71,8 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         htmlElement.classList.toggle('dark');
 
         if (html.classList.contains('dark')) {
+            themeToggle.innerHTML = `<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode`;
             localStorage.setItem('theme', 'dark');
         } else {
+            themeToggle.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode`;
             localStorage.setItem('theme', 'light');
         }
     })
