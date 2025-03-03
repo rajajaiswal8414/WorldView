@@ -19,7 +19,7 @@ function renderCountries(data) {
     data.forEach((country) => {
         const countryCard = document.createElement('a');
         countryCard.classList.add('xs:m-0', 'mx-14', 'shadow-md', 'h-auto', 'max-w-xs', 'hover:scale-105', 'transition', 'duration-300', 'ease-in-out', 'block', 'bg-white', 'dark:bg-darkBlue');
-        countryCard.href = `/API_Project/country.html?name=${country.name.common}`
+        countryCard.href = `/country.html?name=${country.name.common}`
 
         countryCard.innerHTML = `
                 <img class="w-full" src="${country.flags.svg}" alt="${country.name.common} flag" />
